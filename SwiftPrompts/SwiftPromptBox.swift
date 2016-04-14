@@ -37,7 +37,7 @@ class SwiftPromptBox: NSObject,SwiftPromptsProtocol {
     let prompt:SwiftPromptsView!
     
     init(title: String, message: String, moveCancel:Bool, onView:UIView) {
-
+        
         self.title = title
         self.message = message
         self.parentView = onView
@@ -45,7 +45,7 @@ class SwiftPromptBox: NSObject,SwiftPromptsProtocol {
         prompt = SwiftPromptsView(frame: parentView!.bounds)
         prompt.enableGesturesOnPrompt(moveCancel)
     }
-
+    
     
     func addButtonAction(type:SwiftPromptsActionType,title: String?,buttonTextColor:UIColor? , callback: SwiftPromptCallback?) {
         switch type {
@@ -82,7 +82,7 @@ class SwiftPromptBox: NSObject,SwiftPromptsProtocol {
             prompt.enableDoubleButtonsOnPrompt()
         }
     }
-
+    
     func promptsBoxAlreadyExisted() -> Bool {
         if let parent = parentView {
             for subview in parent.subviews {
@@ -99,7 +99,7 @@ class SwiftPromptBox: NSObject,SwiftPromptsProtocol {
             if promptsBoxAlreadyExisted() {
                 print("promptsBoxAlreadyExisted, skip showMessageBox")
                 return
-            } 
+            }
             
             prompt.delegate = self
             
@@ -109,7 +109,7 @@ class SwiftPromptBox: NSObject,SwiftPromptsProtocol {
             //Set the properties of the prompt
             prompt.setPromptHeader(self.title)
             prompt.setPromptContentText(self.message)
-
+            
             
             parent.addSubview(prompt)
         }
@@ -143,10 +143,12 @@ class SwiftPromptBox: NSObject,SwiftPromptsProtocol {
         prompt.setPromptBottomLineVisibility(false)
         prompt.setPromptBottomBarVisibility(true)
         prompt.setPromptTopLineColor(UIColor(red: 151.0/255.0, green: 151.0/255.0, blue: 151.0/255.0, alpha: 1.0))
-        prompt.setPromptBackgroundColor(UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.67))
+        prompt.setPromptBackgroundColor(UIColor(red: 255.0/255.0, green: 253.0/255.0, blue: 195.0/255.0, alpha: 1.0))
         prompt.setPromptBottomBarColor(UIColor(red: 34.0/255.0, green: 139.0/255.0, blue: 34.0/255.0, alpha: 0.67))
         prompt.setMainButtonColor(UIColor.whiteColor())
         prompt.setMainButtonText("OK")
+        
+        prompt.setPromptContentTxtSize(13.0)
     }
     
     func deleteStyle() {
@@ -165,10 +167,12 @@ class SwiftPromptBox: NSObject,SwiftPromptsProtocol {
         prompt.setPromptOutlineColor(UIColor(red: 133.0/255.0, green: 133.0/255.0, blue: 133.0/255.0, alpha: 1.0))
         prompt.setPromptDismissIconColor(UIColor(red: 133.0/255.0, green: 133.0/255.0, blue: 133.0/255.0, alpha: 1.0))
         prompt.setPromptTopLineColor(UIColor(red: 151.0/255.0, green: 151.0/255.0, blue: 151.0/255.0, alpha: 1.0))
-        prompt.setPromptBackgroundColor(UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.67))
+        prompt.setPromptBackgroundColor(UIColor(red: 255.0/255.0, green: 253.0/255.0, blue: 195.0/255.0, alpha: 1.0))
         prompt.setPromptBottomBarColor(UIColor(red: 255.0/255.0, green: 214.0/255.0, blue: 68.0/255.0, alpha: 1.0))
         prompt.setMainButtonColor(UIColor.whiteColor())
         prompt.setMainButtonText("Delete")
+        
+        prompt.setPromptContentTxtSize(13.0)
     }
     
     func galiveStyle() {
@@ -184,7 +188,7 @@ class SwiftPromptBox: NSObject,SwiftPromptsProtocol {
         let dividerColor:UIColor = UIColor(red: 151.0/255.0, green: 151.0/255.0, blue: 151.0/255.0, alpha: 1.0)
         
         
-        prompt.setPromptContentTxtColor(UIColor.grayColor())
+        
         prompt.setPromptTopBarVisibility(topBar)
         prompt.setPromptBottomBarVisibility(bottomBar)
         prompt.setPromptTopLineVisibility(topLine)
@@ -196,6 +200,8 @@ class SwiftPromptBox: NSObject,SwiftPromptsProtocol {
         prompt.setPromptHeaderTxtColor(headTextColor)
         prompt.setPromptBottomLineColor(bottomLineColor)
         prompt.setPromptButtonDividerColor(dividerColor)
+        
+        prompt.setPromptContentTxtSize(13.0)
     }
     
     //MARK:- SwiftPromptsProtocol
