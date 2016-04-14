@@ -9,33 +9,34 @@
 import UIKit
 
 class TestVC: UIViewController {
-    let testStr = "testStr"
+
     @IBAction func galiveButtonClicked(sender: AnyObject) {
-        func mainClicked() {
-            print("GALive:mainButtonAction:\(self.testStr)")
+        func mainButtonAction() {
+            print("mainButtonAction")
         }
         
-        func secondClicked() {
-            print("GALive:secondButtonAction:\(self.testStr)")
+        func secondButtonAction() {
+            print("secondButtonAction")
         }
         
-        func cancle() {
-            print("GALive:cancelAction:\(self.testStr)")
+        func cancleAction() {
+            print("cancelAction")
         }
         
-        let promptBox = SwiftPromptBox(title: "包装SwiftPrompts", message: "修改为UIAlert定义方式\ndfadsfadfadsfadsfadsfasfasdfasfasdfadsfasdf\ndsfdasfafddfad", moveCancel:true, onView: self.view)
+        
+        let promptBox = SwiftPromptBox(title: "title", message: "就像使用UIAlertController一样", moveCancel:true, onView: self.view)
         promptBox.selectStyle(SwiftPromptViewStyle.GALive)
         
         promptBox.addButtonAction(SwiftPromptsActionType.Cancel, title: "", buttonTextColor: nil) {
-            cancle()
+            cancleAction()
         }
         
         promptBox.addButtonAction(SwiftPromptsActionType.MainButtonClicked, title: "main", buttonTextColor: UIColor(red: 151.0/255.0, green: 214.0/255.0, blue: 68.0/255.0, alpha: 1.0)) {
-            mainClicked()
+            mainButtonAction()
         }
         
         promptBox.addButtonAction(SwiftPromptsActionType.SecondButtonClicked, title: "second", buttonTextColor: nil) {
-            secondClicked()
+            secondButtonAction()
         }
         
 
@@ -53,11 +54,11 @@ class TestVC: UIViewController {
     
     @IBAction func deleteButtonClicked(sender: AnyObject) {
         func mainClicked() {
-            print("delete:mainButtonAction:\(self.testStr)")
+            print("delete:mainButtonAction")
         }
         
         func cancle() {
-            print("delete:cancelAction:\(self.testStr)")
+            print("delete:cancelAction")
         }
         
         let promptBox = SwiftPromptBox(title: "delete", message: "deleteMsg", moveCancel:false, onView: self.view)
