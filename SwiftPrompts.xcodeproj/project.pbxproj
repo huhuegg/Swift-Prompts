@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		848300721CBF7FE9004728A5 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848300711CBF7FE9004728A5 /* TestVC.swift */; };
+		848300741CBF7FF9004728A5 /* SwiftPromptBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848300731CBF7FF8004728A5 /* SwiftPromptBox.swift */; };
+		848300751CBF801E004728A5 /* SwiftPromptBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848300731CBF7FF8004728A5 /* SwiftPromptBox.swift */; };
 		CDA6F4F31CA28FFF003CE0A2 /* SwiftPrompts.h in Headers */ = {isa = PBXBuildFile; fileRef = CDA6F4F21CA28FFF003CE0A2 /* SwiftPrompts.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDA6F5031CA29120003CE0A2 /* SwiftPrompts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA6F5001CA29120003CE0A2 /* SwiftPrompts.swift */; };
 		CDA6F5041CA29120003CE0A2 /* SwiftPromptsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA6F5011CA29120003CE0A2 /* SwiftPromptsView.swift */; };
@@ -22,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		848300711CBF7FE9004728A5 /* TestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
+		848300731CBF7FF8004728A5 /* SwiftPromptBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftPromptBox.swift; sourceTree = "<group>"; };
 		CDA6F4EF1CA28FFF003CE0A2 /* SwiftPrompts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftPrompts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA6F4F21CA28FFF003CE0A2 /* SwiftPrompts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftPrompts.h; sourceTree = "<group>"; };
 		CDA6F4F41CA28FFF003CE0A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +81,7 @@
 		CDA6F4F11CA28FFF003CE0A2 /* SwiftPrompts */ = {
 			isa = PBXGroup;
 			children = (
+				848300731CBF7FF8004728A5 /* SwiftPromptBox.swift */,
 				CDA6F5001CA29120003CE0A2 /* SwiftPrompts.swift */,
 				CDA6F5011CA29120003CE0A2 /* SwiftPromptsView.swift */,
 				CDA6F5021CA29120003CE0A2 /* UIImageEffects.swift */,
@@ -88,6 +94,7 @@
 		CDA6F50B1CA293E9003CE0A2 /* SwiftPrompts-Example */ = {
 			isa = PBXGroup;
 			children = (
+				848300711CBF7FE9004728A5 /* TestVC.swift */,
 				CDA6F51E1CA29449003CE0A2 /* Main.storyboard */,
 				CDA6F51C1CA2942A003CE0A2 /* SwiftPromptsVC.swift */,
 				CDA6F50C1CA293E9003CE0A2 /* AppDelegate.swift */,
@@ -211,6 +218,7 @@
 				CDA6F5051CA29120003CE0A2 /* UIImageEffects.swift in Sources */,
 				CDA6F5041CA29120003CE0A2 /* SwiftPromptsView.swift in Sources */,
 				CDA6F5031CA29120003CE0A2 /* SwiftPrompts.swift in Sources */,
+				848300741CBF7FF9004728A5 /* SwiftPromptBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,10 +226,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848300751CBF801E004728A5 /* SwiftPromptBox.swift in Sources */,
 				CDA6F5221CA29473003CE0A2 /* UIImageEffects.swift in Sources */,
 				CDA6F51D1CA2942A003CE0A2 /* SwiftPromptsVC.swift in Sources */,
 				CDA6F50D1CA293E9003CE0A2 /* AppDelegate.swift in Sources */,
 				CDA6F5211CA2946F003CE0A2 /* SwiftPromptsView.swift in Sources */,
+				848300721CBF7FE9004728A5 /* TestVC.swift in Sources */,
 				CDA6F5201CA2946C003CE0A2 /* SwiftPrompts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +428,7 @@
 				CDA6F51A1CA293EA003CE0A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
