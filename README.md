@@ -33,5 +33,6 @@ func mainButtonAction() {
         
 
         promptBox.showMessageBox()
+}
 ```
 
