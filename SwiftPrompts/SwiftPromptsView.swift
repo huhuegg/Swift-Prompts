@@ -13,6 +13,7 @@ import UIKit
     optional func clickedOnTheMainButton()
     optional func clickedOnTheSecondButton()
     optional func promptWasDismissed()
+    optional func onCancel()
 }
 
 public class SwiftPromptsView: UIView {
@@ -301,6 +302,7 @@ public class SwiftPromptsView: UIView {
             if (recognizer.state == UIGestureRecognizerState.Ended)
             {
                 if (shouldDismissPrompt == true) {
+                    self.masterClass.delegate?.onCancel?()
                     UIView.animateWithDuration(0.6, animations: {
                         self.layer.opacity = 0.0
                         self.masterClass.layer.opacity = 0.0

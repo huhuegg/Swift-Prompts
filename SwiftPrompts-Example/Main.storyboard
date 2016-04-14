@@ -1,15 +1,75 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vJc-l9-eXn">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--TestVC-->
+        <scene sceneID="3aR-1P-uDi">
+            <objects>
+                <viewController id="vJc-l9-eXn" customClass="TestVC" customModule="SwiftPrompts_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NyJ-Kd-fSl"/>
+                        <viewControllerLayoutGuide type="bottom" id="jzr-Bn-BFm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kCn-Zx-t8G">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALI-e3-LfW">
+                                <rect key="frame" x="250" y="275" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Uy2-el-qRX"/>
+                                    <constraint firstAttribute="width" constant="100" id="rhz-oL-lJo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="GALive"/>
+                                <connections>
+                                    <action selector="galiveButtonClicked:" destination="vJc-l9-eXn" eventType="touchUpInside" id="Gsw-X0-WX2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JbE-lI-SOM">
+                                <rect key="frame" x="250" y="345" width="100" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Success"/>
+                                <connections>
+                                    <action selector="successButtonClicked:" destination="vJc-l9-eXn" eventType="touchUpInside" id="rKT-LZ-bgM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLb-tp-Pca">
+                                <rect key="frame" x="250" y="415" width="100" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteButtonClicked:" destination="vJc-l9-eXn" eventType="touchUpInside" id="wkd-vc-XIu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.73333333329999995" green="0.74509803919999995" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="JbE-lI-SOM" firstAttribute="top" secondItem="ALI-e3-LfW" secondAttribute="bottom" constant="20" id="8mJ-nF-qf4"/>
+                            <constraint firstItem="YLb-tp-Pca" firstAttribute="top" secondItem="JbE-lI-SOM" secondAttribute="bottom" constant="20" id="900-vu-yol"/>
+                            <constraint firstItem="ALI-e3-LfW" firstAttribute="centerY" secondItem="kCn-Zx-t8G" secondAttribute="centerY" id="Bzl-HW-iE6"/>
+                            <constraint firstItem="JbE-lI-SOM" firstAttribute="centerX" secondItem="ALI-e3-LfW" secondAttribute="centerX" id="Hwf-JD-g9A"/>
+                            <constraint firstItem="YLb-tp-Pca" firstAttribute="width" secondItem="ALI-e3-LfW" secondAttribute="width" id="KcK-XR-p7b"/>
+                            <constraint firstItem="YLb-tp-Pca" firstAttribute="centerX" secondItem="ALI-e3-LfW" secondAttribute="centerX" id="Lfz-D4-owy"/>
+                            <constraint firstItem="JbE-lI-SOM" firstAttribute="width" secondItem="ALI-e3-LfW" secondAttribute="width" id="VoV-cN-9XA"/>
+                            <constraint firstItem="ALI-e3-LfW" firstAttribute="centerX" secondItem="kCn-Zx-t8G" secondAttribute="centerX" id="aIv-Fq-NJ5"/>
+                            <constraint firstItem="JbE-lI-SOM" firstAttribute="height" secondItem="ALI-e3-LfW" secondAttribute="height" id="jjX-wV-HBy"/>
+                            <constraint firstItem="YLb-tp-Pca" firstAttribute="height" secondItem="ALI-e3-LfW" secondAttribute="height" id="qnQ-uM-84z"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SQK-CZ-A9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="328" y="-259"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swift_Prompts" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftPrompts_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
